@@ -1,94 +1,159 @@
-# 🤖 AI Resume Analyzer
+# AI Resume Analyzer
 
-A production-grade, open-source resume analyzer that uses **semantic embeddings**, **NER-based skill extraction**, and **weighted scoring** to evaluate resume-job alignment. Built for accuracy, extensibility, and real-world HR/recruiting workflows.
+<p align="center">
+  <b>AI-powered Resume Screening using NLP, Semantic Matching, and Intelligent Scoring</b>
+</p>
 
-## ✨ Features
-- 📄 Supports PDF, DOCX, TXT
-- 🧠 Semantic similarity via `sentence-transformers`
-- 🔍 Rule + NLP hybrid skill/experience/education extraction
-- 📊 Weighted scoring (semantic, skills, experience)
-- 💡 Actionable feedback & missing skill detection
-- 🌐 Streamlit UI + CLI interface
-- ⚙️ Fully configurable via `config.yaml`
+<p align="center">
+  <a href="https://github.com/Nirrmitt/AI-Resume-Analyzer-plus-EDA/stargazers">
+    <img src="https://img.shields.io/github/stars/Nirrmitt/AI-Resume-Analyzer-plus-EDA?style=for-the-badge" />
+  </a>
+  <a href="https://github.com/Nirrmitt/AI-Resume-Analyzer-plus-EDA/network/members">
+    <img src="https://img.shields.io/github/forks/Nirrmitt/AI-Resume-Analyzer-plus-EDA?style=for-the-badge" />
+  </a>
+  <a href="https://github.com/Nirrmitt/AI-Resume-Analyzer-plus-EDA/issues">
+    <img src="https://img.shields.io/github/issues/Nirrmitt/AI-Resume-Analyzer-plus-EDA?style=for-the-badge" />
+  </a>
+  <img src="https://img.shields.io/badge/Python-3.9+-blue?style=for-the-badge" />
+  <img src="https://img.shields.io/badge/NLP-spaCy-green?style=for-the-badge" />
+  <img src="https://img.shields.io/badge/Model-SentenceTransformers-orange?style=for-the-badge" />
+  <img src="https://img.shields.io/badge/UI-Streamlit-red?style=for-the-badge" />
+</p>
 
-## 🚀 Quick Start
+---
 
-### 1. Install Dependencies
+## Live Demo
+
+Try the application here:  
+https://your-app.streamlit.app  
+
+---
+
+## Demo
+
+![Demo](assets/demo.gif)
+
+---
+
+## Overview
+
+AI Resume Analyzer is a production-grade system designed to evaluate resume–job alignment using advanced Natural Language Processing techniques.
+
+The system combines:
+- Semantic similarity using SentenceTransformers  
+- Named Entity Recognition (NER) using spaCy  
+- Hybrid rule-based and machine learning extraction  
+- Configurable weighted scoring  
+
+It generates accurate match scores, identifies missing skills, and provides actionable insights for both candidates and recruiters.
+
+---
+
+## Features
+
+- Supports PDF, DOCX, and TXT formats  
+- Semantic similarity matching using transformer models  
+- NLP-based extraction of skills, experience, and education  
+- Weighted scoring system (semantic, skills, experience)  
+- Skill gap detection with actionable feedback  
+- Command-line interface (CLI) and Streamlit web application  
+- Fully configurable using `config.yaml`  
+
+---
+
+## Tech Stack
+
+- Python  
+- spaCy  
+- SentenceTransformers  
+- Streamlit  
+- scikit-learn  
+
+---
+
+## Installation
+
 ```bash
+git clone https://github.com/Nirrmitt/AI-Resume-Analyzer-plus-EDA.git
+cd AI-Resume-Analyzer-plus-EDA
 pip install -r requirements.txt
 python -m spacy download en_core_web_sm
-```
 
-### 2. Run CLI
-```bash
+Usage
+Run via CLI
+
 python main.py --resume sample_resume.pdf --job "Senior Python Developer role requiring AWS, Docker, FastAPI, and CI/CD experience..."
-```
 
-### 3. Run Web UI
-```bash
+Run Web Application
 streamlit run app.py
-```
 
-## 📐 Architecture
-```
-[Upload/Text] → [Text Extractor] → [Resume Parser (spaCy + Regex)]
-                                      ↓
-[Job Description] → [Embedding Model] → [Semantic + Skill + Exp Scoring]
-                                      ↓
-                          [Weighted Final Score + Feedback]
-```
+Architecture
+Resume Input → Text Extraction → NLP Parsing (spaCy + Rules)
+                                ↓
+Job Description → Embedding Model → Semantic + Skill + Experience Scoring
+                                ↓
+                    Final Score + Feedback + Skill Gap Analysis
 
-## 🎯 How to Achieve "10x Accuracy"
+                    Accuracy and Optimization
 
-"10x accuracy" isn't a standard ML metric, but you can dramatically improve precision/recall with these engineering practices:
+The system is engineered for high precision and recall through:
 
-| Strategy | Implementation |
-|----------|----------------|
-| **Domain-Specific Embeddings** | Fine-tune `all-MiniLM-L6-v2` on HR/resume data using `sentence-transformers` + contrastive learning |
-| **Custom NER for Skills** | Train spaCy NER on annotated resume data (Prodigy, Label Studio) |
-| **OCR for Scanned PDFs** | Integrate `pytesseract` + `pdf2image` fallback |
-| **Evaluation Pipeline** | Use `precision`, `recall`, `F1`, `HR@K` on labeled dataset |
-| **Threshold Calibration** | Optimize weights/thresholds via grid search on validation set |
-| **Context-Aware Parsing** | Add section detection (Experience, Education, Skills) via layout models (`layoutparser`, `docling`) |
+Domain-specific embedding fine-tuning
+Custom-trained NER models for skill extraction
+Context-aware parsing using section detection
+Threshold and weight optimization
+Evaluation using precision, recall, F1-score, and ranking metrics
 
-### 📊 Evaluation Example
-```python
+Evaluation Example
+
 from sklearn.metrics import precision_score, recall_score, f1_score
-# y_true = binary match labels, y_pred = model scores > threshold
+
 precision = precision_score(y_true, y_pred_binary)
 recall = recall_score(y_true, y_pred_binary)
 f1 = f1_score(y_true, y_pred_binary)
-```
 
-## 📂 Project Structure
-```
+Project Structure
 ai-resume-analyzer/
 ├── requirements.txt
 ├── config.yaml
 ├── src/
-│   ├── extractor.py   # File parsing
-│   ├── parser.py      # NLP extraction
-│   ├── analyzer.py    # Scoring engine
-│   └── utils.py       # Config/logging
-├── main.py            # CLI
-├── app.py             # Streamlit UI
+│   ├── extractor.py
+│   ├── parser.py
+│   ├── analyzer.py
+│   └── utils.py
+├── main.py
+├── app.py
 └── README.md
-```
 
-## 🔧 Customization
-- Edit `config.yaml` to adjust weights/thresholds
-- Extend `COMMON_SKILLS` in `parser.py` or load from JSON/DB
-- Swap embedding model in `config.yaml` (e.g., `BAAI/bge-large-en-v1.5`)
+Customization
+Modify scoring weights and thresholds in config.yaml
+Extend skill dictionaries or integrate external datasets
+Replace embedding models (e.g., BAAI/bge-large-en-v1.5)
 
-## 📜 License
-MIT License. Free for personal & commercial use.
+Use Cases
+Resume screening automation
+Candidate-job matching systems
+Recruitment analytics and HR intelligence
+Personal resume optimization tools
 
-## 🤝 Contributing
-PRs welcome! Focus on:
-- Better layout parsing
-- Domain-specific fine-tuning scripts
-- Evaluation benchmarks
-- API endpoint (`FastAPI`)
+Contributing
 
----
-**Built with ❤️ using Python, spaCy, SentenceTransformers & Streamlit**
+Contributions are welcome. Potential areas include:
+
+Layout-aware parsing improvements
+Model fine-tuning pipelines
+Benchmark datasets and evaluation frameworks
+REST API integration (FastAPI)
+UI/UX enhancements
+
+License
+
+MIT License
+
+Keywords
+
+AI Resume Analyzer, Resume Matching, NLP, Semantic Similarity, Skill Extraction, Recruitment AI, Resume Screening, Machine Learning, HR Tech
+
+Support
+
+If you found this project useful, consider giving it a star!
