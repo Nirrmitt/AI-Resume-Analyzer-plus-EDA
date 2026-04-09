@@ -1,0 +1,15 @@
+Jane Doe
+jane@email.com | 555-0000
+
+SKILLS
+Python, SQL, Tableau, Power BI, Pandas, AWS, Git, Agile, Data Visualization
+
+EXPERIENCE
+Data Analyst | TechCorp | Jan 2022 - Present
+- Built interactive dashboards tracking + in monthly revenue using Power BI and SQL
+- Optimized complex SQL queries reducing report runtime by 40 percent
+- Collaborated with product teams to define KPIs and automate weekly reporting pipelines
+
+EDUCATION
+BSc Data Science | State University | 2021
+GPA: 3.8/4.0 | Relevant Coursework: Statistics, Machine Learning, Database Systems

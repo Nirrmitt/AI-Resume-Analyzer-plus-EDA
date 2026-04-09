@@ -1,0 +1,18 @@
+weights:
+  semantic: 0.45
+  skills: 0.35
+  experience: 0.20
+
+thresholds:
+  strong_match: 80
+  good_match: 65
+  weak_match: 45
+
+model:
+  embedding: all-MiniLM-L6-v2
+  spacy: en_core_web_sm
+
+limits:
+  max_experience_entries: 5
+  max_education_entries: 3
+  max_feedback_items: 6
