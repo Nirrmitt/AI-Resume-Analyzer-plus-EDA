@@ -38,11 +38,6 @@ Then upload a resume or use `data/sample_resume.txt`, and paste a job descriptio
 
 ---
 
-## Demo
-
-![Demo](assets/demo.gif)
-
----
 
 ## Overview
 
