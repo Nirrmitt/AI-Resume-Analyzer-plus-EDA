@@ -24,8 +24,17 @@
 
 ## Live Demo
 
-Try the application here:  
-https://your-app.streamlit.app  
+Run the application locally with:
+
+```bash
+git clone https://github.com/Nirrmitt/AI-Resume-Analyzer-plus-EDA.git
+cd AI-Resume-Analyzer-plus-EDA
+pip install -r requirements.txt
+python -m spacy download en_core_web_sm
+streamlit run app.py
+```
+
+Then upload a resume or use `data/sample_resume.txt`, and paste a job description in the web UI.
 
 ---
 
