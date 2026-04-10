@@ -36,7 +36,6 @@ streamlit run app.py
 
 Then upload a resume or use `data/sample_resume.txt`, and paste a job description in the web UI.
 
-
 ---
 
 ## Overview
