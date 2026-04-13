@@ -81,16 +81,16 @@ git clone https://github.com/Nirrmitt/AI-Resume-Analyzer-plus-EDA.git
 cd AI-Resume-Analyzer-plus-EDA
 pip install -r requirements.txt
 python -m spacy download en_core_web_sm
-
-Usage
+```
+## Usage
 Run via CLI
 
 python main.py --resume sample_resume.pdf --job "Senior Python Developer role requiring AWS, Docker, FastAPI, and CI/CD experience..."
 
-Run Web Application
+### Run Web Application
 streamlit run app.py
 
-Architecture
+## Architecture
 Resume Input → Text Extraction → NLP Parsing (spaCy + Rules)
                                 ↓
 Job Description → Embedding Model → Semantic + Skill + Experience Scoring
@@ -99,7 +99,7 @@ Job Description → Embedding Model → Semantic + Skill + Experience Scoring
 
                     Accuracy and Optimization
 
-The system is engineered for high precision and recall through:
+## The system is engineered for high precision and recall through:
 
 Domain-specific embedding fine-tuning
 Custom-trained NER models for skill extraction
@@ -107,7 +107,7 @@ Context-aware parsing using section detection
 Threshold and weight optimization
 Evaluation using precision, recall, F1-score, and ranking metrics
 
-Evaluation Example
+## Evaluation Example
 
 from sklearn.metrics import precision_score, recall_score, f1_score
 
@@ -115,31 +115,46 @@ precision = precision_score(y_true, y_pred_binary)
 recall = recall_score(y_true, y_pred_binary)
 f1 = f1_score(y_true, y_pred_binary)
 
-Project Structure
+## Project Structure
+```bash
 ai-resume-analyzer/
 ├── requirements.txt
 ├── config.yaml
 ├── src/
-│   ├── extractor.py
-│   ├── parser.py
-│   ├── analyzer.py
-│   └── utils.py
+│ ├── extractor.py
+│ ├── parser.py
+│ ├── analyzer.py
+│ └── utils.py
 ├── main.py
 ├── app.py
 └── README.md
+```
 
-Customization
+## 📌 Description
+
+- **requirements.txt** → Project dependencies  
+- **config.yaml** → Configuration settings  
+- **src/** → Core logic of the application  
+  - `extractor.py` → Extracts data from resumes  
+  - `parser.py` → Parses structured information  
+  - `analyzer.py` → Performs scoring & analysis  
+  - `utils.py` → Helper functions  
+- **main.py** → CLI or main execution entry point  
+- **app.py** → Web app  
+- **README.md** → Project documentation
+
+## Customization
 Modify scoring weights and thresholds in config.yaml
 Extend skill dictionaries or integrate external datasets
 Replace embedding models (e.g., BAAI/bge-large-en-v1.5)
 
-Use Cases
+## Use Cases
 Resume screening automation
 Candidate-job matching systems
 Recruitment analytics and HR intelligence
 Personal resume optimization tools
 
-Contributing
+## Contributing
 
 Contributions are welcome. Potential areas include:
 
@@ -149,14 +164,17 @@ Benchmark datasets and evaluation frameworks
 REST API integration (FastAPI)
 UI/UX enhancements
 
-License
+## License
 
-MIT License
+MIT License: free to use, modify, and showcase in portfolios.
 
-Keywords
+## Let's Connect
 
-AI Resume Analyzer, Resume Matching, NLP, Semantic Similarity, Skill Extraction, Recruitment AI, Resume Screening, Machine Learning, HR Tech
+Building scalable data systems and real-world AI projects. Always open to collaborations, internships, and impactful opportunities.
 
-Support
+- 💼 LinkedIn → https://www.linkedin.com/in/n-r-t/
+- 🧑‍💻 GitHub → https://github.com/Nirrmitt  
+- 📧 Email → nirrmit.rtickoo@gmail.com
 
-If you found this project useful, consider giving it a star!
+---
+### Star this repo if it helped you, and feel free to fork & build on top of it!
