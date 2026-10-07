@@ -164,17 +164,19 @@ Benchmark datasets and evaluation frameworks
 REST API integration (FastAPI)
 UI/UX enhancements
 
-## License
+## 🤝 Connect & Contribute
+I’m always open to feedback, collaboration, or chat about analytics engineering, automation, or data storytelling.
 
-MIT License: free to use, modify, and showcase in portfolios.
+📧 Email: nirrmit.rtickoo@gmail.com
 
-## Let's Connect
+🌐 Portfolio: [NRT](https://nirrmitt.github.io/NRT-Terminal)
 
-Building scalable data systems and real-world AI projects. Always open to collaborations, internships, and impactful opportunities.
+💼 LinkedIn: [Nirrmit R. Tickoo](https://www.linkedin.com/in/n-r-t/)
 
-- 💼 LinkedIn → https://www.linkedin.com/in/n-r-t/
-- 🧑‍💻 GitHub → https://github.com/Nirrmitt  
-- 📧 Email → nirrmit.rtickoo@gmail.com
+🐙 GitHub: [ @nirrmitt](https://github.com/Nirrmitt)
 
----
-### Star this repo if it helped you, and feel free to fork & build on top of it!
+🔧 Found a bug or have an idea? Open an issue or submit a PR. I review all contributions!
+
+### 📜 License
+MIT ©[Nirrmitt](https://nirrmitt.github.io/NRT-Terminal) Feel free to use, adapt, and build upon this for your own projects or learning journey.
+
