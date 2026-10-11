@@ -77,7 +77,7 @@ class ResumeAnalyzer:
         with open("data/results.jsonl", "a", encoding="utf-8") as f:
             f.write(json.dumps(log_entry) + "\n")
         return {
-            "overall_score": round(final_score, 1),del notebooks\eda_resume_analysis.ipynb
+            "overall_score": round(final_score, 1),
             "match_level": match_level,
             "breakdown": {
                 "semantic_similarity": round(semantic_sim * 100, 1),
